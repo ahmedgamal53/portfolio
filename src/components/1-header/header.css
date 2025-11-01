@@ -1,0 +1,187 @@
+header.flex {
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+header ul.flex {
+    gap: 16px;
+}
+
+header nav {
+    background-color: var(--bgheader);
+    padding: 0.77rem 1.6rem;
+    border-radius: 55px;
+}
+
+header ul li a {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 0.88rem;
+    font-weight: 500;
+    position: relative;
+    transition: .3s;
+}
+
+header ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--blue), transparent);
+    opacity: 0;
+    transition: .3s;
+}
+
+header ul li a.last:hover::after {
+    opacity: 0 !important;
+}
+
+header ul li a:hover::after {
+    opacity: 1;
+}
+
+header ul li a:hover {
+    color: var(--blue);
+    opacity: 1;
+    font-size: 0.9rem;
+}
+
+header .menu {
+    display: none;
+}
+
+header .moon {
+    background-color: var(--bgheader);
+    height: 2.4rem;
+    width: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--subtitle);
+    border: 1px solid rgba(244, 165, 96, 0.249);
+    transition: .3s;
+}
+
+
+header .moon:hover {
+    color: var(--title);
+    border: 1px solid rgba(244, 165, 96);
+}
+
+header .clear {
+    font-size: 1.5rem;
+    color: var(--subtitle);
+    transition: 0.3s;
+    font-weight: bold;
+    margin-bottom: -1rem;
+}
+
+header .clear:hover {
+    font-size: 1.9rem;
+    color: crimson;
+    transform: rotate(180deg);
+}
+
+header button {
+    font-size: 1.2rem;
+}
+
+/* modal */
+header .fixed {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(40, 40, 48, 0.91);
+    display: block;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+header .hidden {
+    display: none;
+}
+
+header .fixed ul.modal {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    animation: move .7s 1;
+
+}
+
+@keyframes move {
+    0% {
+        scale: 0;
+    }
+
+    60% {
+        scale: 1.2;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+header .fixed ul.modal li {
+    border-bottom: 1px solid var(--border);
+    padding-top: 0.5rem;
+    padding-bottom: 0.77rem;
+}
+
+header .fixed ul.modal li:first-child {
+    text-align: right;
+    border: none;
+    padding-top: 0rem;
+    padding-bottom: 0.2rem;
+}
+
+
+
+header .fixed ul.modal li button {
+    cursor: pointer;
+}
+
+header .fixed ul.modal li:last-child {
+    border: none;
+}
+
+header .fixed ul.modal li a {
+    font-size: 1rem;
+}
+
+@media (max-width:700px) {
+
+
+    header nav {
+        display: none;
+    }
+
+    header .menu {
+        background-color: var(--bgheader);
+        height: 2.4rem;
+        width: 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50%;
+        color: var(--subtitle);
+        border: 1px solid rgba(244, 165, 96, 0.249);
+        transition: .3s;
+    }
+
+    header .menu:hover {
+        color: var(--title);
+        border: 1px solid rgba(244, 165, 96);
+    }
+}

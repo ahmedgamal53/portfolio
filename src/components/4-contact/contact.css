@@ -1,0 +1,153 @@
+section.contact-us .flex {
+    justify-content: space-between;
+}
+
+section.contact-us .email {
+    margin-right: .7rem;
+    color: var(--subtitle);
+}
+
+section.contact-us .contact {
+    font-size: 2.1rem;
+    color: var(--title);
+    margin-bottom: 1rem;
+}
+
+section.contact-us p {
+    color: var(--subtitle);
+    margin-bottom: 2rem;
+    line-height: 1.6rem;
+}
+
+section.contact-us label {
+    color: var(--subtitle);
+}
+
+section.contact-us .message {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.8rem;
+}
+
+section.contact-us #email,
+section.contact-us #message {
+    all: unset;
+    margin-left: 1rem;
+    background-color: rgba(63, 63, 70, 0.15);
+    border: 1px solid rgb(63 63 70);
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    width: 11rem;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.light section.contact-us #email,
+.light section.contact-us #message {
+    background-color: rgba(255, 255, 255, 0.162);
+    border: 1px solid rgba(128, 128, 128, 0.451);
+    box-shadow: 1px 1px 1px rgba(73, 73, 75, 0.105);
+    color: #232324;
+}
+
+
+section.contact-us #email:focus,
+section.contact-us #message:focus {
+    border: 1px solid var(--blue);
+}
+
+.light section.contact-us #email:focus,
+.light section.contact-us #message:focus {
+    border: 1px solid rgb(78, 80, 80);
+}
+
+section.contact-us #message {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+section.contact-us button {
+    /* background-color: rgba(36, 37, 46, 1); */
+    background: linear-gradient(100deg, #000000cf, #cfc9c930);
+    padding: .85rem 2rem;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: .3s;
+    font-size: 1.05rem;
+    border: 1px solid rgb(63 63 70);
+    color: var(--subtitle);
+    /* color: var(--secondary); */
+    transition: .3s;
+
+}
+
+section.contact-us button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    color: var(--subtitle) !important;
+}
+
+.light section.contact-us button {
+    color: var(--secondary);
+    border: none;
+    background: linear-gradient(100deg, #000000d9, #1311115c);
+}
+
+.light section.contact-us button:disabled {
+    color: var(--secondary) !important;
+
+}
+
+
+section.contact-us button:hover {
+    color: var(--title);
+}
+
+.light section.contact-us button:hover {
+    color: var(--secondary);
+    /* border: 1px solid #0e0d0d24; */
+}
+
+
+section.contact-us .animation {
+    width: 50%;
+}
+
+@media (max-width:1100px) {
+    section.contact-us .animation {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    section.contact-us form {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+
+    section.contact-us form .mini {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    section.contact-us #email,
+    section.contact-us #message {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        padding: .7rem 0rem .7rem .9rem;
+    }
+
+    section.contact-us button {
+        width: 30%;
+        align-self: center;
+
+    }
+
+
+}
