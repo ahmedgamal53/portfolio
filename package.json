@@ -1,9 +1,12 @@
 {
+  "homepage": "https://ahmedgamal53.github.io/portfolio",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -15,6 +18,7 @@
     "@formspree/react": "^3.0.0",
     "@mui/material": "^7.3.4",
     "framer-motion": "^12.23.24",
+    "gh-pages": "^6.3.0",
     "lottie-react": "^2.4.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
