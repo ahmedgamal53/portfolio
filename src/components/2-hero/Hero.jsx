@@ -8,6 +8,7 @@ import Lottie from "lottie-react";
 import Programming from "../../animation/Programming Computer.json";
 import "./hero.css";
 import { motion } from "framer-motion";
+import personal from "../../assets/photo_2025-10-11_11-57-31.jpg";
 export default function Hero() {
   return (
     <section className="hero" id="about">
@@ -24,11 +25,7 @@ export default function Hero() {
             transition={{ damping: 6, type: "spring", stiffness: 20 }}
             className="avatar-img"
           >
-            <img
-              src="/photo_2025-10-11_11-57-31.jpg"
-              alt=""
-              className={"avatar"}
-            />
+            <img src={personal} alt="" className={"avatar"} />
           </motion.div>
           <div className="icon-verified">
             <MdVerified />

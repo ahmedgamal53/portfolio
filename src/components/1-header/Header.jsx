@@ -17,11 +17,11 @@ export default function header() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     if (theme === "dark") {
-      document.body.classList.remove("dark");
-      document.body.classList.add("light");
-    } else {
       document.body.classList.remove("light");
       document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
     }
   }, [theme]);
 
@@ -50,18 +50,17 @@ export default function header() {
       </nav>
       <button
         onClick={() => {
-          localStorage.setItem(
-            "currentmode",
-            theme === "dark" ? "light" : "dark"
-          );
-          settheme(localStorage.getItem("currentmode"));
+          const newtheme = theme === "dark" ? "light" : "dark";
+
+          localStorage.setItem("currentmode", newtheme);
+          settheme(newtheme);
         }}
         className="moon"
       >
         {theme === "dark" ? (
-          <MdOutlineWbSunny style={{ color: "orange" }} />
-        ) : (
           <IoMoonOutline />
+        ) : (
+          <MdOutlineWbSunny style={{ color: "orange" }} />
         )}
       </button>
 
@@ -74,8 +73,8 @@ export default function header() {
         <ul
           onClick={(e) => {
             e.stopPropagation();
-            const clicked = e.target instanceof Element ? e.target : null;
 
+            const clicked = e.target instanceof Element ? e.target : null;
             if (clicked && clicked.closest("a")) {
               setshowmodal(false);
             }
