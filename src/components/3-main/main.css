@@ -43,7 +43,7 @@ main .right-section {
     flex-grow: 1;
     flex-wrap: wrap;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
